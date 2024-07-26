@@ -16,10 +16,16 @@ Update Kube config on the machine you’re running terraform from.
 
 Install ArgoCD helm chart on the provisioned cluster
 ![image](https://github.com/user-attachments/assets/1482bc3a-0bf6-473b-9f7e-ec751bfb845c)
-
+## Apply Manifest Files
 ![image](https://github.com/user-attachments/assets/9bc8e698-73b9-4d03-968d-1c521489ce93)
+Bootstrapping with ArgoCD
+Once your manifest files have been applied, the next step is to bootstrap them to ArgoCD to enhance continuous delivery. Follow these steps:
 
-![image](https://github.com/user-attachments/assets/41319659-4667-4e80-bef8-5b041e8007ce)
+** Check that argocd is installed and the pods are running
+![image](https://github.com/user-attachments/assets/41319659-4667-4e80-bef8-5b041e8007ce
+Map Port for ArgoCD Access:
+
+When the pods are ready, map your port to access ArgoCD in the browser:
 ![image](https://github.com/user-attachments/assets/e20b69c3-1314-47ff-b561-9f41074f4d52)
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo![image](https://github.com/user-attachments/assets/dab31053-2fc2-47d5-83d1-7f037198d10b)
