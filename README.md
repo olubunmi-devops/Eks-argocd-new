@@ -1,4 +1,4 @@
-# BootStrap K8s with ArgoCD
+# BootStrap EKS Cluster with ArgoCD using Terraform,Helm.
 
 Step 1. Clone the repository.Move  into the Eks folder which contains the Terraform files to provision your cluster on AWS and perform the required terraform operations below.
 
@@ -23,6 +23,11 @@ Install ArgoCD helm chart on the provisioned cluster
 ![image](https://github.com/user-attachments/assets/e20b69c3-1314-47ff-b561-9f41074f4d52)
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo![image](https://github.com/user-attachments/assets/dab31053-2fc2-47d5-83d1-7f037198d10b)
+# Login to Argocd
+When the password has been retrieved,login into Argocd with 
+![image](https://github.com/user-attachments/assets/9d987499-b9a9-4d94-a8bf-cf8dff9b08d0)
+
+
 
 
 
