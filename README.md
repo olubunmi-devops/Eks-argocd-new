@@ -22,7 +22,8 @@ Bootstrapping with ArgoCD
 Once your manifest files have been applied, the next step is to bootstrap them to ArgoCD to enhance continuous delivery. Follow these steps:
 
 ** Check that argocd is installed and the pods are running
-![image](https://github.com/user-attachments/assets/41319659-4667-4e80-bef8-5b041e8007ce
+![image](https://github.com/user-attachments/assets/5dc605e3-eeee-4497-b24e-a3c2e71e3b64)
+
 Map Port for ArgoCD Access:
 
 When the pods are ready, map your port to access ArgoCD in the browser:
