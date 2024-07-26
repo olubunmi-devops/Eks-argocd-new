@@ -26,6 +26,11 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 # Login to Argocd
 When the password has been retrieved,login into Argocd with 
 ![image](https://github.com/user-attachments/assets/9d987499-b9a9-4d94-a8bf-cf8dff9b08d0)
+Connect GitHub Repository to ArgoCD:
+
+Once logged in successfully, connect the GitHub repo that contains the manifest with the following command:
+argocd repo add https://github.com/username/repourl --username <your-github-username> --password <your-personal-access-token>
+![image](https://github.com/user-attachments/assets/1550021e-e7ba-4b0c-9daa-c7d2f1dd6806)
 
 
 
