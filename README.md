@@ -43,3 +43,25 @@ kubectl config get-contexts
 argocd cluster add <context-name>
 
 ![image](https://github.com/user-attachments/assets/3f8bc397-2ddb-4820-a460-891a208727e7)
+Create and Sync Your Application:
+
+Once the cluster has been added successfully, proceed to create your app and configure your ArgoCD using:
+
+argocd app create appname \
+   --repo https://github.com/username/repourl \
+   --path terraform/ \
+   --dest-server https://kubernetes.default.svc \
+   --dest-namespace argocd
+   ![image](https://github.com/user-attachments/assets/751629f3-8287-4dd7-b9dc-eae8f5e2ce4c)
+   Sync Your Application:
+
+Finally, sync your app using the following command:
+
+argocd app sync danoapp
+![image](https://github.com/user-attachments/assets/3f48dca5-21ea-4033-9a56-57d34fe793ba)
+Once the sync is successful, you can log in to your ArgoCD via the browser to check it out.
+
+![image](https://github.com/user-attachments/assets/24b718cd-2c73-40f1-8e5f-36460e333ad9)
+
+
+
