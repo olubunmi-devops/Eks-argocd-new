@@ -23,10 +23,10 @@ Install ArgoCD helm chart on the provisioned cluster
 ![image](https://github.com/user-attachments/assets/e20b69c3-1314-47ff-b561-9f41074f4d52)
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo![image](https://github.com/user-attachments/assets/dab31053-2fc2-47d5-83d1-7f037198d10b)
-# Login to Argocd
+## 3.Login to Argocd
 When the password has been retrieved,login into Argocd with 
 ![image](https://github.com/user-attachments/assets/9d987499-b9a9-4d94-a8bf-cf8dff9b08d0)
-Connect GitHub Repository to ArgoCD:
+## 4.Connect GitHub Repository to ArgoCD:
 
 Once logged in successfully, connect the GitHub repo that contains the manifest with the following command:
 argocd repo add https://github.com/username/repourl --username <your-github-username> --password <your-personal-access-token>
@@ -35,7 +35,7 @@ argocd repo add https://github.com/username/repourl --username <your-github-user
 
 Note: To get your GitHub password, use your GitHub token, which can be generated in developer’s settings.
 
-##Add Your Cluster to ArgoCD:
+## 5.Add Your Cluster to ArgoCD:
 
 Once your repo has been connected successfully, add your cluster to the ArgoCD server using the following command:
 
@@ -43,7 +43,7 @@ kubectl config get-contexts
 argocd cluster add <context-name>
 
 ![image](https://github.com/user-attachments/assets/3f8bc397-2ddb-4820-a460-891a208727e7)
-Create and Sync Your Application:
+## 6.Create and Sync Your Application:
 
 Once the cluster has been added successfully, proceed to create your app and configure your ArgoCD using:
 
@@ -53,7 +53,7 @@ argocd app create appname \
    --dest-server https://kubernetes.default.svc \
    --dest-namespace argocd
    ![image](https://github.com/user-attachments/assets/751629f3-8287-4dd7-b9dc-eae8f5e2ce4c)
-   Sync Your Application:
+  ## 7. Sync Your Application:
 
 Finally, sync your app using the following command:
 
