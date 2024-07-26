@@ -70,5 +70,6 @@ Once the sync is successful, you can log in to your ArgoCD via the browser to ch
 
 ![image](https://github.com/user-attachments/assets/24b718cd-2c73-40f1-8e5f-36460e333ad9)
 
+By following these steps, you have set up a Kubernetes cluster, applied your manifest files, and integrated ArgoCD for continuous delivery. This setup not only streamlines your deployment process but also enhances the manageability and scalability of your applications.
 
 
