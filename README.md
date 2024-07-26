@@ -33,6 +33,13 @@ argocd repo add https://github.com/username/repourl --username <your-github-user
 ![image](https://github.com/user-attachments/assets/1550021e-e7ba-4b0c-9daa-c7d2f1dd6806)
 
 
+Note: To get your GitHub password, use your GitHub token, which can be generated in developer’s settings.
 
+##Add Your Cluster to ArgoCD:
 
+Once your repo has been connected successfully, add your cluster to the ArgoCD server using the following command:
 
+kubectl config get-contexts
+argocd cluster add <context-name>
+
+![image](https://github.com/user-attachments/assets/3f8bc397-2ddb-4820-a460-891a208727e7)
